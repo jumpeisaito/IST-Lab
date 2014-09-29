@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head><title> LightsOut </title></head>
+  <script src='../js/jquery-2.1.1.min.js'></script>
+  <script src='../js/knockout-3.2.0.js'></script>
+  <script src='../js/lodash.min.js'></script>
+  <body>
+    <table border="solid">
+      <tbody data-bind="foreach: $root.lightRows">
+        <tr>
+          <td width="20" height="20">
+            <div data-bind="click: $root.clickCell, attr: {'col': 0, 'row': $index}, style: {'background-color': $data.c0() ? 'blue' : 'red'}" style="display:block;width:100%;height:100%;"></div>
+          </td>
+          <td width="20" height="20">
+            <div data-bind="click: $root.clickCell, attr: {'col': 1, 'row': $index}, style: {'background-color': $data.c1() ? 'blue' : 'red'}" style="display:block;width:100%;height:100%;"></div>
+          </td>
+          <td width="20" height="20">
+            <div data-bind="click: $root.clickCell, attr: {'col': 2, 'row': $index}, style: {'background-color': $data.c2() ? 'blue' : 'red'}" style="display:block;width:100%;height:100%;"></div>
+          </td>
+          <td width="20" height="20">
+            <div data-bind="click: $root.clickCell, attr: {'col': 3, 'row': $index}, style: {'background-color': $data.c3() ? 'blue' : 'red'}" style="display:block;width:100%;height:100%;"></div>
+          </td>
+          <td width="20" height="20">
+            <div data-bind="click: $root.clickCell, attr: {'col': 4, 'row': $index}, style: {'background-color': $data.c4() ? 'blue' : 'red'}" style="display:block;width:100%;height:100%;"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <script src='lightsOut.js'></script>
+  </body>
+</html>
